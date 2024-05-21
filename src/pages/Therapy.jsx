@@ -3,7 +3,7 @@ import React from 'react';
 export default function Therapy() {
     return (
         <div>
-            침,약침,부항 / 추나 / 한약
+            자연스러움을 경험하다.
         </div>
     );
 }
