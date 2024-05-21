@@ -21,7 +21,7 @@ export default function Navbar() {
             >
                 자연스러움{isDropdownOpen && (
                     <div className="absolute mt-2 w-48 bg-white shadow-lg rounded-md"> 
-
+                        <Link></Link>
                     </div>
                 )}
             </Link>
