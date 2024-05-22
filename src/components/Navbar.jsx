@@ -105,7 +105,6 @@ export default function Navbar() {
             <div>
                 <Link to='/rd'>
                     <button 
-                        className="w-40 h-12"
                         className={linkClassNames('/rd')}
                     >
                         교육연구
