@@ -15,3 +15,76 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.fade-in {
+  opacity: 1;
+}
+
+/* 초기 opacity를 0으로 설정 */
+.opacity-0 {
+  opacity: 0;
+}
+
+/* 전환 효과 설정 */
+.transition-opacity {
+  transition: opacity 1s ease-in-out;
+}
+
+/* 스크롤바 숨기기 */
+.h-screen::-webkit-scrollbar {
+  display: none;
+}
+
+.h-screen {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@font-face {
+  font-family: 'GrandifloraOne-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/GrandifloraOne-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SungDongMyungjo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//fastly.jsdelivr.net/korean-webfonts/1/orgs/govs/sdgu/SungDongMyungjo/SungDongMyungjoR.woff2') format('woff2'), url('//fastly.jsdelivr.net/korean-webfonts/1/orgs/govs/sdgu/SungDongMyungjo/SungDongMyungjoR.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'HSBombaram21-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/HSBombaram21-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arita-buri-SemiBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Arita-dotum-Medium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'SUITE-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
