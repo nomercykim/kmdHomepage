@@ -16,7 +16,7 @@ export default function Navbar() {
         { label: '수요일,\nCHO를 만나는 날', path: '/wednesday' },
         { label: '교육연구', path: '/rd' },
         { label: '자연으로 돌아가는 곳,\n바른한의원', path: '/contact' },
-        { label: '\n\n\ncontact :\n 032-885-8270', }
+        { label: '\n\n\n\ncontact :\n 032-885-8270', }
     ];
 
     return (
