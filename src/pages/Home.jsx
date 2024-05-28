@@ -71,7 +71,7 @@ export default function Home() {
                         Your browser does not support the video tag.
                     </video>                  
                     <div className="relative text-center text-6xl text-white font-AritaburiSemiBold z-20">
-                        自然 : 스스로 존재하는 것
+                        自然 : 스스로 존재하는 것.
                     </div>
                     <div className="relative w-4/5 max-w-2xl mx-auto mt-5 z-20">
                         <div className="relative text-center text-lg text-gray-200 leading-relaxed font-AritadotumMedium p-4">
