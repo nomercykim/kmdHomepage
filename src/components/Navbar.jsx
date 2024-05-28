@@ -15,7 +15,8 @@ export default function Navbar() {
         { label: '자연스러움을\n경험하다', path: '/therapy' },
         { label: '수요일,\nCHO를 만나는 날', path: '/wednesday' },
         { label: '교육연구', path: '/rd' },
-        { label: '자연으로 돌아가는 곳,\n바른한의원', path: '/contact' }
+        { label: '자연으로 돌아가는 곳,\n바른한의원', path: '/contact' },
+        { label: '\n\n\ncontact :\n 032-885-8270', }
     ];
 
     return (
@@ -30,17 +31,17 @@ export default function Navbar() {
             </button>
             {/* 사이드바 */}
             <div 
-                className={`fixed top-0 right-0 h-full bg-gray-800 text-white font-SUITERegular shadow-lg transform ${
+                className={`fixed top-0 right-0 h-full bg-gray-800 text-gray-300 font-SUITERegular shadow-lg transform ${
                     isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 } transition-transform duration-300 z-40`} // 사이드바의 스타일과 열림/닫힘 상태에 따른 애니메이션 설정
-                style={{ width: '250px', backgroundColor: 'rgba(0, 0, 0, 0.5)' }} // 사이드바의 너비와 배경 색상 설정
+                style={{ width: '300px', backgroundColor: 'rgba(0, 0, 0, 0.5)' }} // 사이드바의 너비와 배경 색상 설정
             >
-                <div className="mt-28"> {/* 상단 여백 추가 */}
+                <div className="mt-32"> {/* 상단 여백 추가 */}
                     {menus.map((menu, index) => (
                         <div key={index} className="relative">
                             <Link to={menu.path}>
                                 <button 
-                                    className="block w-full text-left px-4 py-2 "
+                                    className="block w-full text-left px-8 py-6 text-2xl"
                                     style={{ whiteSpace: 'pre-line' }} // 텍스트 줄 바꿈 설정
                                 >
                                     {menu.label}

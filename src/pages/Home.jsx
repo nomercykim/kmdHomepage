@@ -59,7 +59,7 @@ export default function Home() {
                 <img src="/onlyLogo_gray.png" alt="Logo" className="w-[51px] h-[51px]" />
             </div>
             <div className="fixed bottom-0 w-full flex justify-between items-center p-14 z-20">
-                <img src="/englishLogo_gray.png" alt="Logo" className="w-[168px] h-[39px]" />
+                <img src="/englishLogo_gray.png" alt="Logo" className="w-[224px] h-[52px]" />
             </div>
 
             {/* section 1 */}
