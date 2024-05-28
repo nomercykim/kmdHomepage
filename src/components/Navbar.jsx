@@ -22,7 +22,7 @@ export default function Navbar() {
         <>
             {/* 메뉴 버튼 */}
             <button 
-                className="fixed top-14 right-14 z-50 bg-white text-black opacity-40 p-2 rounded" // 버튼의 스타일과 위치를 설정
+                className="fixed top-14 right-14 z-50 bg-gray-400 text-black opacity-40 p-2 rounded" // 버튼의 스타일과 위치를 설정
                 onClick={() => setIsMenuOpen(!isMenuOpen)} // 클릭 시 메뉴의 열림 상태를 토글
                 style={{ width: '40px', height: '40px' }} // 버튼의 너비와 높이를 정사각형으로 설정
             >

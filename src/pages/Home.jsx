@@ -69,10 +69,7 @@ export default function Home() {
                     <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full opacity-100 object-cover z-0">
                         <source src="/video.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
-                    </video>
-                    {/* bg 레이어 추가*/}
-                    <div className="absolute top-0 left-0 w-full h-full bg-black opacity-15 z-10"></div>
-
+                    </video>                  
                     <div className="relative text-center text-6xl text-white font-AritaburiSemiBold z-20">
                         自然 : 스스로 존재하는 것
                     </div>
@@ -86,10 +83,9 @@ export default function Home() {
                             우리 몸이 조금이라도 자연의 섭리에 가까워진다면,<br />
                             우리 몸은 다시 자연으로 되돌아갑니다.
                         </div>
-                    </div>
-                    
+                    </div>                  
                 </section>
-                <section ref={sectionRef} className={`opacity-0 transition-opacity duration-1000 ease-in-out whitespace-pre-line mt-10 bg-gray-300 ${isScrolled ? 'fade-in' : ''} relative z-10`}>
+                <section ref={sectionRef} className={`opacity-0 transition-opacity duration-1000 ease-in-out whitespace-pre-line mt-10 bg-gray-100 ${isScrolled ? 'fade-in' : ''} relative z-10`}>
                     <div className="flex flex-col items-center justify-center h-screen">
                         <div className="w-4/5 text-center text-base leading-relaxed">
                             {`
