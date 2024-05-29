@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
-    const location = useLocation();
-    const currentPath = location.pathname; // 현재 경로를 가져옵니다.
     const [isMenuOpen, setIsMenuOpen] = useState(false); // 메뉴의 열림 상태를 관리하는 상태 변수입니다.
 
     const menus = [
