@@ -27,16 +27,14 @@ export default function HomeSectionMain() {
                 Your browser does not support the video tag.
             </video>                  
             <div
-                className={`relative text-center text-6xl text-white font-AritaburiSemiBold z-20 transform transition-all duration-1000 ease-in-out ${
-                    isMainTextVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                }`}
+                className={`relative text-center text-6xl text-white font-AritaburiSemiBold z-20 transform transition-all duration-1000 ease-in-out 
+                    ${isMainTextVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
                 自然 : 스스로 존재하는 것
             </div>
             <div
-                className={`relative w-4/5 max-w-2xl mx-auto mt-5 z-20 transform transition-opacity duration-1000 ease-in-out ${
-                    isSubTextVisible ? 'opacity-100' : 'opacity-0'
-                }`}
+                className={`relative w-4/5 max-w-2xl mx-auto mt-5 z-20 transform transition-opacity duration-1000 ease-in-out 
+                ${isSubTextVisible ? 'opacity-100' : 'opacity-0'}`}
             >
                 <div className="relative text-center text-lg text-gray-300 leading-relaxed font-AritadotumMedium p-4">
                     우리 몸은 신의 피조물이자 자연의 일부로써 처음부터 건강합니다.<br />
