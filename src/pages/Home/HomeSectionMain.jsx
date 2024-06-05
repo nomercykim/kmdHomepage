@@ -20,7 +20,7 @@ export default function HomeSectionMain() {
     }, []);
 
     return (
-        <section className="relative flex flex-col items-center justify-center h-screen bg-gray-200">
+        <section className="relative flex flex-col justify-center h-screen">
             {/* 비디오를 배경으로 사용 */}
             <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full opacity-100 object-cover z-0">
                 <source src="/video.mp4" type="video/mp4" />

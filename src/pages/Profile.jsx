@@ -8,7 +8,7 @@ const profileSubMenuLinks = [
 
 export default function Profile() {
     return (
-        <div>
+        <div className="h-screen overflow-hidden">
             <SubMenu links={profileSubMenuLinks} />
             <div style={{ whiteSpace: 'pre-line' }}>
                 {`

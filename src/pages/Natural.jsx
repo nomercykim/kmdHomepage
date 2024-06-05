@@ -11,7 +11,7 @@ const naturalSubMenuLinks = [
 
 export default function Natural() {
     return (
-        <div>
+        <div className="h-screen overflow-hidden">
             <SubMenu links={naturalSubMenuLinks} />
             
             <div style={{ whiteSpace: 'pre-line' }}>

@@ -10,7 +10,7 @@ const researchSubMenuLinks = [
 
 export default function Research() {
     return (
-        <div>
+        <div className="h-screen overflow-hidden">
             <SubMenu links={researchSubMenuLinks} />
             <div style={{ whiteSpace: 'pre-line' }}>
                 {`

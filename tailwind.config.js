@@ -4,10 +4,13 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        'fade-in': {
+          'fade-in': {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+      },
+      colors: {
+        'darkbrown-800': '#2c1b09',
       },
       animation: {
         'fade-in': 'fade-in 1s ease-in-out forwards',
@@ -21,6 +24,11 @@ module.exports = {
         'AritadotumMedium':['Arita-dotum-Medium', 'sans-serif'],
         'SUITERegular':['SUITE-Regular','sans-serif']
       },
+      spacing: {
+        '112': '28rem',
+        '128': '32rem',
+        '144': '36rem',
+      }
     },
   },
   plugins: [],

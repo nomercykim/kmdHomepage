@@ -10,7 +10,7 @@ const therapySubMenuLinks = [
 
 export default function Therapy() {
     return (
-        <div>
+        <div className="h-screen overflow-hidden">
             <SubMenu links={therapySubMenuLinks} />
             <div style={{ whiteSpace: 'pre-line' }}>
                 {`

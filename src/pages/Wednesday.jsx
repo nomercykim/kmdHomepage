@@ -11,7 +11,7 @@ const wednesdaySubMenuLinks = [
 
 export default function Wednesday() {
     return (
-        <div>
+        <div className="h-screen overflow-hidden">
             <SubMenu links={wednesdaySubMenuLinks} />
             <div style={{ whiteSpace: 'pre-line' }}>
                 {`

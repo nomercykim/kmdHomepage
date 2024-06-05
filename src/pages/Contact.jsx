@@ -9,7 +9,7 @@ const contactSubMenuLinks = [
 
 export default function Contact() {
     return (
-        <div>
+        <div className="h-screen overflow-hidden">
             <SubMenu links={contactSubMenuLinks} />
             <div style={{ whiteSpace: 'pre-line' }}>
                 {`

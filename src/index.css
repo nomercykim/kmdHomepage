@@ -104,3 +104,18 @@ code {
   font-weight: 400;
   font-style: normal;
 }
+
+@keyframes slideRight {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.animate-slideRight {
+  animation: slideRight 1s ease-in-out;
+}
