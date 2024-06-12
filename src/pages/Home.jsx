@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'; // React와 관련 훅을 가져옵니다.
+import React, { useRef } from 'react'; // React와 관련 훅을 가져옵니다.
 import 'tailwindcss/tailwind.css'; // Tailwind CSS를 가져옵니다.
 import '../index.css'; // 사용자 정의 CSS를 가져옵니다.
 import HomeSectionMain from './Home/HomeSectionMain'; // HomeSectionMain 컴포넌트를 가져옵니다.
@@ -8,6 +8,7 @@ import { SectionObserver } from '../hooks/SectionObserver'; // SectionObserver �
 import { LogoObserver } from '../hooks/LogoObserver';
 
 export default function Home() {
+    const sectionHomeRef = useRef(null);
     const section2Ref = useRef(null); // section2의 ref를 생성합니다.
     const section3Ref = useRef(null); // section3의 ref를 생성합니다.
 
@@ -23,10 +24,10 @@ export default function Home() {
         threshold: 0.5
     }); // section3가 화면에 50% 이상 보일 때 상태를 업데이트하는 SectionObserver 훅을 사용합니다.
 
-    const isLogoDark = LogoObserver([section2Ref, section3Ref], {
+    const isLogoDark = LogoObserver([sectionHomeRef, section2Ref, section3Ref], {
         root: null,
         rootMargin: '0px',
-        threshold: 0
+        threshold: 0.8
     }); // 새로운 LogoObserver 훅을 사용하여 로고의 색상 변화를 감지합니다.
 
     return (
@@ -49,7 +50,7 @@ export default function Home() {
             </div>
             <div className="h-screen overflow-y-auto relative z-10">
                 <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
-                <HomeSectionMain />
+                <HomeSectionMain sectionRef={sectionHomeRef} />
                 <HomeSection2 sectionRef={section2Ref} isScrolled={isSection2Visible} />
                 <HomeSection3 sectionRef={section3Ref} isScrolled={isSection3Visible} />
             </div>

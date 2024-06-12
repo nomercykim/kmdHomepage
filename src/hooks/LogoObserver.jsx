@@ -2,27 +2,21 @@ import { useEffect, useState } from 'react';
 
 // LogoObserver 훅: 주어진 refs와 옵션을 사용하여 해당 요소가 화면 특정 지점에 도달했는지 감지합니다.
 export const LogoObserver = (refs, options) => {
+    const [isSection2Visible, setIsSection2Visible] = useState(false); // section2의 가시성 상태를 관리하는 변수
+    const [isSection3Visible, setIsSection3Visible] = useState(false); // section3의 가시성 상태를 관리하는 변수
     const [isLogoDark, setIsLogoDark] = useState(false); // 로고 상태를 관리하는 변수
 
     useEffect(() => {
         // Intersection Observer의 콜백 함수: 요소가 화면 특정 지점에 도달했는지 여부를 감지합니다.
         const observerCallback = (entries) => {
             entries.forEach(entry => {
-                const top = entry.boundingClientRect.top;
-                const height = window.innerHeight;
-                const thresholdTop = height * 0.2;
-                const thresholdBottom = height * 0.5;
+                const isIntersecting = entry.isIntersecting;
 
-                if (entry.target === refs[0].current) {
-                    if (top < thresholdTop && top > 0) {
-                        setIsLogoDark(true); // section2가 화면 상단 1/5 지점에 도달했을 때 로고를 갈색으로 설정합니다.
-                    } else if (top > thresholdBottom) {
-                        setIsLogoDark(false); // section2가 화면의 중앙 지점에서 homesection으로 돌아갈 때 로고를 회색으로 설정합니다.
-                    }
+                if (entry.target === refs[1].current) {
+                    setIsSection2Visible(isIntersecting);
                 }
-
-                if (entry.target === refs[1].current && top < thresholdTop && top > 0) {
-                    setIsLogoDark(true); // section3가 화면 상단 1/5 지점에 도달했을 때 로고를 갈색으로 유지합니다.
+                if (entry.target === refs[2].current) {
+                    setIsSection3Visible(isIntersecting);
                 }
             });
         };
@@ -46,6 +40,17 @@ export const LogoObserver = (refs, options) => {
             });
         };
     }, [refs, options]); // refs와 options가 변경될 때마다 효과를 재실행합니다.
+    
+    useEffect(() => {
+        if (isSection3Visible) {
+            setIsLogoDark(true);
+        } else if (isSection2Visible) {
+            setIsLogoDark(true); // section2가 보일 때 로고를 갈색으로 설정
+        } else {
+            setIsLogoDark(false); // section2와 section3 모두 보이지 않을 때 로고를 회색으로 설정
+        }
+    }, [isSection2Visible, isSection3Visible]);
+
 
     return isLogoDark; // 로고의 상태를 반환합니다.
 };
