@@ -27,16 +27,42 @@ export default function HomeSectionMain() {
                 Your browser does not support the video tag.
             </video>                  
             <div
-                className={`relative text-center text-6xl text-white font-AritaburiSemiBold z-20 transform transition-all duration-1000 ease-in-out 
-                    ${isMainTextVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                className={`
+                    relative
+                    top-[0%] left-[0%]
+                    text-center text-3xl text-white 
+                    font-AritaburiSemiBold 
+                    z-20 
+                    transform transition-all duration-1000 ease-in-out 
+                    ${isMainTextVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
+                    
+                    text-2xl text-white                   
+                    sm:top-[0%] sm:left-[0%] sm:text-4xl 
+                    md:top-[0%] md:left-[0%] md:text-5xl 
+                    lg:top-[0%] lg:left-[0%] lg:text-6xl
+                    `                  
+                }
             >
                 自然 : 스스로 존재하는 것
             </div>
             <div
-                className={`relative w-4/5 max-w-2xl mx-auto mt-5 z-20 transform transition-opacity duration-1000 ease-in-out 
-                ${isSubTextVisible ? 'opacity-100' : 'opacity-0'}`}
+                className={`
+                    relative w-4/5 max-w-2xl mx-auto mt-5 z-20 
+                    transform transition-opacity duration-1000 ease-in-out 
+                    ${isSubTextVisible ? 'opacity-100' : 'opacity-0'}`
+                }
             >
-                <div className="relative text-center text-lg text-gray-300 leading-relaxed font-AritadotumMedium p-4">
+                <div className="
+                    relative 
+                    top-[0%] left-[0%] text-center leading-relaxed
+                    text-xs text-gray-300 leading-relaxed 
+                    font-AritadotumMedium p-4
+
+                    sm:text-sm sm:leading-relaxed
+                    md:text-base
+                    lg:text-base 
+                    "
+                >
                     우리 몸은 신의 피조물이자 자연의 일부로써 처음부터 건강합니다.<br />
                     자연스러움이란 곧 건강입니다.<br />
                     자연스러움을 지키는 것. 자연으로 되돌아가는 것.<br />

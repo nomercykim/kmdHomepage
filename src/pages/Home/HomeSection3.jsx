@@ -16,10 +16,11 @@ export default function HomeSection3({ sectionRef, isScrolled }) {
                     absolute
                     top-[20%] left-[10%]
                     text-2xl text-white
+                    font-SUITERegular
                     sm:top-[20%] sm:left-[10%] sm:text-3xl 
                     md:top-[20%] md:left-[13%] md:text-4xl 
                     lg:top-[20%] lg:left-[15%] lg:text-6xl
-                    font-SUITERegular" style={{ lineHeight: '1.4' }}
+                    " style={{ lineHeight: '1.4' }}
                 >
                     근골격계의<br />단 하나의 목적, <br />
                 </div>
@@ -27,7 +28,7 @@ export default function HomeSection3({ sectionRef, isScrolled }) {
                     absolute
                     top-[33%] left-[10%]
                     text-xs leading-relaxed
-                    sm:top-[36%] sm:left-[10%] sm:text-xs
+                    sm:top-[34%] sm:left-[10%] sm:text-xs sm:leading-relaxed
                     md:top-[22%] md:left-[40%] md:text-sm
                     lg:top-[23%] lg:left-[45%] lg:text-base"
                 >
@@ -51,12 +52,13 @@ export default function HomeSection3({ sectionRef, isScrolled }) {
                 </div>
                 <div className="
                     absolute
-                    bottom-[20%] left-[10%]
+                    bottom-[25%] left-[10%] right-auto
                     text-2xl text-white
-                    sm:bottom-[20%] sm:right-[20%] sm:text-4xl
-                    md:bottom-[20%] md:right-[20%] md:text-5xl
-                    lg:bottom-[20%] lg:right-[10%] lg:text-6xl
-                    font-SUITERegular"
+                    font-SUITERegular
+                    sm:bottom-[24%] sm:left-[10%] sm:text-3xl
+                    md:bottom-[30%] md:left-auto md:right-[20%] md:text-4xl
+                    lg:bottom-[20%] lg:left-auto lg:right-[20%] lg:text-6xl
+                    "
                 >
                     “좋은 자세로 잘 움직이는 것”
                 </div>
