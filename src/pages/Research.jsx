@@ -3,15 +3,12 @@ import SubMenu from '../components/SubMenu';
 
 
 const researchSubMenuLinks = [
-    { label: '강사 활동', path: '/rd/instructor' },
-    { label: '학회', path: '/rd/conference' },
-    { label: '추나 교육 문의', path: '/rd/education' }
+    
 ];
 
 export default function Research() {
     return (
         <div className="h-screen overflow-hidden">
-            <SubMenu links={researchSubMenuLinks} />
             <div style={{ whiteSpace: 'pre-line' }}>
                 {`
                 

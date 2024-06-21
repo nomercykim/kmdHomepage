@@ -1,15 +1,8 @@
 import React from 'react';
-import SubMenu from '../components/SubMenu';
-
-const profileSubMenuLinks = [
-    { label: 'Profile', path: '/profile' },
-    { label: 'Story', path: '/story' }
-];
 
 export default function Profile() {
     return (
         <div className="h-screen overflow-hidden">
-            <SubMenu links={profileSubMenuLinks} />
             <div style={{ whiteSpace: 'pre-line' }}>
                 {`
 

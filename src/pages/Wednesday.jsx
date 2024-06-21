@@ -1,18 +1,9 @@
 import React from 'react';
-import SubMenu from '../components/SubMenu';
-
-
-const wednesdaySubMenuLinks = [
-    { label: 'CEO', path: '/wednesday/ceo' },
-    { label: '운동선수', path: '/wednesday/athlete' },
-    { label: '참고자료', path: '/wednesday/ceo' }
-];
 
 
 export default function Wednesday() {
     return (
         <div className="h-screen overflow-hidden">
-            <SubMenu links={wednesdaySubMenuLinks} />
             <div style={{ whiteSpace: 'pre-line' }}>
                 {`
                     수요일, CHO(최고건강관리자)를 만나는 날

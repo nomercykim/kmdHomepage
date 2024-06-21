@@ -1,16 +1,10 @@
 import React from 'react';
 import SubMenu from '../components/SubMenu';
 
-const contactSubMenuLinks = [
-    { label: '자연으로', path: '/contact/' },
-    { label: '하루 15명', path: '/contact/' },
-    { label: 'contact', path: '/contact/' }
-];
 
 export default function Contact() {
     return (
         <div className="h-screen overflow-hidden">
-            <SubMenu links={contactSubMenuLinks} />
             <div style={{ whiteSpace: 'pre-line' }}>
                 {`
 

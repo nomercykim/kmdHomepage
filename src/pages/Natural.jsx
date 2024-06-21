@@ -1,19 +1,10 @@
 import React from 'react';
-import SubMenu from '../components/SubMenu';
 
-const naturalSubMenuLinks = [
-    { label: '생명', path: '/natural/life' },
-    { label: '자연스러운 순환', path: '/natural/cycle' },
-    { label: '자연스러운 구조', path: '/natural/structure' },
-    { label: '자연스러운 조절 능력', path: '/natural/regulation' },
-    { label: '자연스러운 영혼과 마음', path: '/natural/mind_soul' }
-];
+
 
 export default function Natural() {
     return (
-        <div className="h-screen overflow-hidden">
-            <SubMenu links={naturalSubMenuLinks} />
-            
+        <div className="h-screen overflow-hidden">            
             <div style={{ whiteSpace: 'pre-line' }}>
                 {`
 
