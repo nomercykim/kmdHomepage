@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import SubMenu from './SubMenu';
 
 export default function Navbar({ isHomeSectionMainVisible }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [hoveredMenu, setHoveredMenu] = useState(null); // 호버링된 메뉴를 추적하기 위한 상태
+    const [isSubMenuVisible, setIsSubMenuVisible] = useState(false); // 서브메뉴 가시성을 추적하기 위한 상태
+    const [currentSubMenu, setCurrentSubMenu] = useState([]); // 현재 서브메뉴 항목을 저장하기 위한 상태
 
     const menus = [
         { label: 'Home', path: '/', subMenu: [
@@ -114,8 +116,11 @@ export default function Navbar({ isHomeSectionMainVisible }) {
                         <div 
                             key={index} 
                             className="relative"
-                            onMouseEnter={() => setHoveredMenu(index)}
-                            onMouseLeave={() => setHoveredMenu(null)}
+                            onMouseEnter={() => {
+                                setCurrentSubMenu(menu.subMenu);
+                                setIsSubMenuVisible(true);
+                            }}
+                            onMouseLeave={() => setIsSubMenuVisible(false)}
                         >
                             <Link to={menu.path}>
                                 <button 
@@ -125,23 +130,11 @@ export default function Navbar({ isHomeSectionMainVisible }) {
                                     {menu.label}
                                 </button>
                             </Link>
-                            {/* 서브 메뉴를 조건부로 렌더링 */}
-                            {hoveredMenu === index && menu.subMenu.length > 0 && (
-                                <div className="absolute top-full left-0 w-full bg-white shadow-lg z-30">
-                                    {menu.subMenu.map((subMenu, subIndex) => (
-                                        <Link 
-                                            key={subIndex} 
-                                            to={subMenu.path} 
-                                            className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                                        >
-                                            {subMenu.label}
-                                        </Link>
-                                    ))}
-                                </div>
-                            )}
                         </div>
                     ))}
                 </div>
+                {/* 서브메뉴를 조건부로 렌더링 */}
+                {isSubMenuVisible && <SubMenu links={currentSubMenu} />}
             </div>
         </>
     );
