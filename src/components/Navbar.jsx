@@ -2,59 +2,55 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import Menu from './Menu';
 import SubMenu from './SubMenu';
 
 export default function Navbar({ isHomeSectionMainVisible }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isSubMenuVisible, setIsSubMenuVisible] = useState(false); // 서브메뉴 가시성을 추적하기 위한 상태
-    const [currentSubMenu, setCurrentSubMenu] = useState([]); // 현재 서브메뉴 항목을 저장하기 위한 상태
+    const [isSubMenuVisible, setIsSubMenuVisible] = useState(false);
 
     const menus = [
-        { label: 'Home', path: '/', subMenu: [
-            { label: '자연', path: '/' },
-            { label: '자연스러움을 잃으면 아픕니다', path: '/Home/Sick' },
-            { label: '근골격계의 단 하나의 목적', path: '/Home/Muscle' }
-            ]
-        },
-        { label: 'Profile', path: '/profile', subMenu: [
-                { label: 'Profile', path: '/profile' },
-                { label: 'Story', path: '/story' }
-            ] 
-        },
-        { label: '자연스러움', path: '/natural', subMenu: [
-                { label: '생명', path: '/natural/life' },
-                { label: '자연스러운 순환', path: '/natural/cycle' },
-                { label: '자연스러운 구조', path: '/natural/structure' },
-                { label: '자연스러운 조절 능력', path: '/natural/regulation' },
-                { label: '자연스러운 영혼과 마음', path: '/natural/mind_soul' }
-            ]
-        },
-        { label: '자연스러움을\n경험하다', path: '/therapy', subMenu: [
-                { label: '침/약침/부항', path: '/therapy/chim' },
-                { label: '추나', path: '/therapy/chuna' },
-                { label: '한약', path: '/therapy/hanyak' }
-            ]
-        },
-        { label: '수요일,\nCHO를 만나는 날', path: '/wednesday', subMenu: [
-                { label: 'CEO', path: '/wednesday/ceo' },
-                { label: '운동선수', path: '/wednesday/athlete' },
-                { label: '참고자료', path: '/wednesday/ceo' }
-            ]
-        },
-        { label: '교육연구', path: '/rd', subMenu: [
-                { label: '강사 활동', path: '/rd/instructor' },
-                { label: '학회', path: '/rd/conference' },
-                { label: '추나 교육 문의', path: '/rd/education' }
-            ] 
-        },
-        {
-            label: '자연으로 돌아가는 곳,\n바른한의원', path: '/contact', subMenu: [
-                { label: '자연으로', path: '/contact/nature' },
-                { label: '하루 15명', path: '/contact/15' },
-                { label: 'Contact', path: '/contact/info' },
-            ]
-        },
+        { label: 'Home', path: '/' },
+        { label: 'Profile', path: '/profile' },
+        { label: '자연스러움', path: '/natural' },
+        { label: '자연스러움을\n경험하다', path: '/therapy' },
+        { label: '수요일,\nCHO를 만나는 날', path: '/wednesday' },
+        { label: '교육연구', path: '/rd' },
+        { label: '자연으로 돌아가는 곳,\n바른한의원', path: '/contact' }
     ];
+
+    const subMenus = [
+        { label: '자연', path: '/' },
+        { label: '자연스러움을\n잃으면 아픕니다', path: '/Home/Sick' },
+        { label: '근골격계의\n단 하나의 목적', path: '/Home/Muscle' },
+        { label: 'Profile', path: '/profile' },
+        { label: 'Story', path: '/story' },
+        { label: '생명', path: '/natural/life' },
+        { label: '자연스러운\n순환', path: '/natural/cycle' },
+        { label: '자연스러운\n구조', path: '/natural/structure' },
+        { label: '자연스러운\n조절 능력', path: '/natural/regulation' },
+        { label: '자연스러운\n영혼과 마음', path: '/natural/mind_soul' },
+        { label: '침/약침/부항', path: '/therapy/chim' },
+        { label: '추나', path: '/therapy/chuna' },
+        { label: '한약', path: '/therapy/hanyak' },
+        { label: 'CEO', path: '/wednesday/ceo' },
+        { label: '운동선수', path: '/wednesday/athlete' },
+        { label: '참고자료', path: '/wednesday/ceo' },
+        { label: '강사 활동', path: '/rd/instructor' },
+        { label: '학회', path: '/rd/conference' },
+        { label: '추나 교육 문의', path: '/rd/education' },
+        { label: '자연으로', path: '/contact/nature' },
+        { label: '하루 15명', path: '/contact/15' },
+        { label: 'Contact', path: '/contact/info' }
+    ];
+
+    const handleMouseEnter = () => {
+        setIsSubMenuVisible(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsSubMenuVisible(false);
+    };
 
     return (
         <>
@@ -108,33 +104,22 @@ export default function Navbar({ isHomeSectionMainVisible }) {
                 <div className="
                     hidden lg:flex
                     w-full
-                    justify-center space-x-12 text-lg font-SUITERegular 
+                    justify-center space-x-0 text-lg font-SUITERegular 
                     text-gray-600 transition-colors duration-500 ease-in-out
                     "
                 >
-                    {menus.map((menu, index) => (
-                        <div 
-                            key={index} 
-                            className="relative"
-                            onMouseEnter={() => {
-                                setCurrentSubMenu(menu.subMenu);
-                                setIsSubMenuVisible(true);
-                            }}
-                            onMouseLeave={() => setIsSubMenuVisible(false)}
-                        >
-                            <Link to={menu.path}>
-                                <button 
-                                    className="transition-colors duration-500 ease-in-out hover:text-gray-100 hover:text-bold" 
-                                    style={{ whiteSpace: 'pre-line' }} 
-                                >
-                                    {menu.label}
-                                </button>
-                            </Link>
-                        </div>
-                    ))}
+                    <Menu 
+                        menus={menus} 
+                        handleMouseEnter={handleMouseEnter}
+                        handleMouseLeave={handleMouseLeave}
+                    />
+                    <SubMenu 
+                        subMenus={subMenus} 
+                        isSubMenuVisible={isSubMenuVisible} 
+                        handleMouseEnter={handleMouseEnter}
+                        handleMouseLeave={handleMouseLeave}
+                    />
                 </div>
-                {/* 서브메뉴를 조건부로 렌더링 */}
-                {isSubMenuVisible && <SubMenu links={currentSubMenu} />}
             </div>
         </>
     );
