@@ -6,19 +6,25 @@ function SubMenu({ subMenus = [], isSubMenuVisible, handleMouseEnter, handleMous
         <>
             {isSubMenuVisible && (
                 <div 
-                    className="absolute top-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-2"
+                    className="
+                        absolute top-full left-1/2 transform -translate-x-1/2 
+                        text-white
+                        bg-gray-800 bg-opacity-50"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
+                    style={{ display: 'grid', gridTemplateColumns: 'repeat(7, minmax(160px, 1fr))', gap: '0px' }}
                 >
-                    <div className="grid grid-cols-7 gap-4">
-                        {subMenus.map((subMenu, subIndex) => (
+                    {subMenus.map((subMenu, subIndex) => (
+                        subMenu && subMenu.path ? (
                             <Link to={subMenu.path} key={subIndex}>
-                                <button className="block w-40 h-12 w-full h-full">
-                                    {subMenu.label}
+                                <button className="block w-full h-20 text-center px-4 text-base"
+                                        dangerouslySetInnerHTML={{ __html: subMenu.label.replace(/\n/g, '<br/>') }}>
                                 </button>
                             </Link>
-                        ))}
-                    </div>
+                        ) : (
+                            <button key={subIndex} className="block w-full h-20" />
+                        )
+                    ))}
                 </div>
             )}
         </>

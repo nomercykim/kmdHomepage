@@ -13,7 +13,11 @@ function Menu({ menus, handleMouseEnter, handleMouseLeave }) {
                 >
                     <Link to={menu.path}>
                         <button 
-                            className="transition-colors duration-500 ease-in-out hover:text-gray-100 hover:font-bold w-40 h-12"
+                            className="
+                            transition-colors duration-500 ease-in-out 
+                            hover:text-gray-100 hover:font-bold 
+                            w-40 h-32 text-base
+                            {/*bg-red-500 bg-opacity-10*/}" // 고정된 크기 설정 및 패딩 조절
                             style={{ whiteSpace: 'pre-line' }} 
                         >
                             {menu.label}
