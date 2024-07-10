@@ -9,7 +9,7 @@ function SubMenu({ subMenus = [], isSubMenuVisible, handleMouseEnter, handleMous
                     className="
                         absolute top-full left-1/2 transform -translate-x-1/2 
                         text-white
-                        bg-gray-800 bg-opacity-50"
+                        bg-gray-800"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                     style={{ display: 'grid', gridTemplateColumns: 'repeat(7, minmax(160px, 1fr))', gap: '0px' }}
@@ -17,12 +17,12 @@ function SubMenu({ subMenus = [], isSubMenuVisible, handleMouseEnter, handleMous
                     {subMenus.map((subMenu, subIndex) => (
                         subMenu && subMenu.path ? (
                             <Link to={subMenu.path} key={subIndex}>
-                                <button className="block w-full h-20 text-center px-4 text-base"
+                                <button className="block w-full h-16 text-center px-4 text-base"
                                         dangerouslySetInnerHTML={{ __html: subMenu.label.replace(/\n/g, '<br/>') }}>
                                 </button>
                             </Link>
                         ) : (
-                            <button key={subIndex} className="block w-full h-20" />
+                            <button key={subIndex} className="block w-full h-16" />
                         )
                     ))}
                 </div>

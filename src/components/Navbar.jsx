@@ -30,7 +30,7 @@ export default function Navbar({ isHomeSectionMainVisible }) {
             { label: '자연으로', path: '/contact/nature' }
         ],
         [
-            { label: '자연스러움을\n잃으면 아픕니다', path: '/Home/Sick' },
+            { label: '자연스러움을\n잃으면 아픕니다', path: '/HomeSection2' },
             { label: 'Story', path: '/story' },
             { label: '자연스러운\n순환', path: '/natural/cycle' },
             { label: '추나', path: '/therapy/chuna' },
@@ -39,7 +39,7 @@ export default function Navbar({ isHomeSectionMainVisible }) {
             { label: '하루 15명', path: '/contact/15' }
         ],
         [
-            { label: '근골격계의\n단 하나의 목적', path: '/Home/Muscle' },
+            { label: '근골격계의\n단 하나의 목적', path: '/HomeSection3' },
             null,
             { label: '자연스러운\n구조', path: '/natural/structure' },
             { label: '한약', path: '/therapy/hanyak' },
@@ -123,23 +123,24 @@ export default function Navbar({ isHomeSectionMainVisible }) {
                 className={`
                     fixed top-0 left-0 right-0 z-30 
                     transition-colors duration-500 ease-in-out 
-                    ${isHomeSectionMainVisible ? 'bg-transparent' : ' bg-white opacity-60'}
                 `}
             >
-                <div className="
+                <div className={`
                     hidden lg:flex
                     w-full
                     justify-center space-x-0 text-lg font-SUITERegular 
                     text-gray-600 transition-colors duration-500 ease-in-out
-                    "
+                    ${isHomeSectionMainVisible ? 'bg-transparent' : ' bg-white'}
+                    `}
+                    
                 >
                     <Menu 
-                        menus={menus.flat()} // Flatten the menus array for Menu component
+                        menus={menus.flat()} 
                         handleMouseEnter={handleMouseEnter}
                         handleMouseLeave={handleMouseLeave}
                     />
                     <SubMenu 
-                        subMenus={subMenus.flat()} // Flatten the subMenus array for SubMenu component
+                        subMenus={subMenus.flat()}
                         isSubMenuVisible={isSubMenuVisible} 
                         handleMouseEnter={handleMouseEnter}
                         handleMouseLeave={handleMouseLeave}
