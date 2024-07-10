@@ -30,3 +30,4 @@ function Menu({ menus, handleMouseEnter, handleMouseLeave }) {
 }
 
 export default Menu;
+// <div> <> 의 차이로 css 스타일이 바뀜. <div>  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} </div>로 바꾸고 tailwind css를 수정해야함.
