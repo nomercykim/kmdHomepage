@@ -18,7 +18,6 @@ function NavbarWithContext() {
     const { isSectionMainVisible } = useStateContext();
     
     // 상태를 확인하기 위한 콘솔 로그
-    console.log("isHomeSectionMainVisible:", isSectionMainVisible);
     
     return <Navbar isHomeSectionMainVisible={isSectionMainVisible} />;
 }
