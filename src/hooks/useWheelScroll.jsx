@@ -11,7 +11,7 @@ export const useWheelScroll = (sectionRefs) => {
     const handleScrollView = (index) => {
         // 인덱스에 해당하는 섹션이 존재할 경우 그 섹션으로 부드럽게 스크롤
         if (scrollRef.current[index]) {
-            scrollRef.current[index].scrollIntoView({ behavior: "smooth" });
+            scrollRef.current[index].scrollIntoView({ behavior: "smooth"});
             setCurrentSectionIndex(index); // 현재 섹션 인덱스 업데이트
         }
     };
@@ -24,7 +24,7 @@ export const useWheelScroll = (sectionRefs) => {
 
         // 1초 동안 추가 스크롤 이벤트 방지
         setIsScrolling(true);
-        setTimeout(() => setIsScrolling(false), 1500);
+        setTimeout(() => setIsScrolling(false), 1000);
 
         //event.deltaY는 휠을 굴릴 때 발생하는 이벤트 객체의 속성으로, 수직 방향의 스크롤 양을 나타냄.
         //이 값은 일반적으로 사용자가 휠을 아래로 굴리면 양수가 되고, 위로 굴리면 음수가 됨.
