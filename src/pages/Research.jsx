@@ -1,10 +1,5 @@
 import React from 'react';
-import SubMenu from '../components/SubMenu';
 
-
-const researchSubMenuLinks = [
-    
-];
 
 export default function Research() {
     return (

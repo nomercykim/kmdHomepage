@@ -11,46 +11,46 @@ export default function Navbar({ isHomeSectionMainVisible }) {
 
     const menus = [
         [{ label: 'Home', path: '/' }],
-        [{ label: 'Profile', path: '/profile' }],
-        [{ label: '자연스러움', path: '/natural' }],
-        [{ label: '자연스러움을\n경험하다', path: '/therapy' }],
-        [{ label: '수요일,\nCHO를 만나는 날', path: '/wednesday' }],
-        [{ label: '교육연구', path: '/rd' }],
-        [{ label: '자연으로 돌아가는 곳,\n바른한의원', path: '/contact' }]
+        [{ label: 'Profile', path: '/Profile' }],
+        [{ label: '자연스러움', path: '/Natural' }],
+        [{ label: '자연스러움을\n경험하다', path: '/Therapy' }],
+        [{ label: '수요일,\nCHO를 만나는 날', path: '/Wednesday' }],
+        [{ label: '교육연구', path: '/Research' }],
+        [{ label: '자연으로 돌아가는 곳,\n바른한의원', path: '/Contact' }]
     ];
 
     const subMenus = [
         [
             { label: '자연', path: '/#HomeSectionMain' },
-            { label: 'Profile', path: '/profile' },
-            { label: '생명', path: '/natural/life' },
-            { label: '침/약침/부항', path: '/therapy/chim' },
-            { label: 'CEO', path: '/wednesday/ceo' },
-            { label: '강사 활동', path: '/rd/instructor' },
-            { label: '자연으로', path: '/contact/nature' }
+            { label: 'Profile', path: '/#ProfileMain' },
+            { label: '생명', path: '/#NaturalMain' },
+            { label: '침/약침/부항', path: '/#Acupuncture' },
+            { label: 'CEO', path: '/#Ceo' },
+            { label: '강사 활동', path: '/#Instructor' },
+            { label: '자연으로', path: '/#ContactNature' }
         ],
         [
             { label: '자연스러움을\n잃으면 아픕니다', path: '/#HomeSection2' },
-            { label: 'Story', path: '/story' },
-            { label: '자연스러운\n순환', path: '/natural/cycle' },
-            { label: '추나', path: '/therapy/chuna' },
-            { label: '운동선수', path: '/wednesday/athlete' },
-            { label: '학회', path: '/rd/conference' },
-            { label: '하루 15명', path: '/contact/15' }
+            { label: 'Story', path: '/#Story' },
+            { label: '자연스러운\n순환', path: '/#NaturalCycle' },
+            { label: '추나', path: '/#Chuna' },
+            { label: '운동선수', path: '/#Athlete' },
+            { label: '학회', path: '/#Conference' },
+            { label: '하루 15명', path: '/#Oneday' }
         ],
         [
             { label: '근골격계의\n단 하나의 목적', path: '/#HomeSection3' },
             null,
-            { label: '자연스러운\n구조', path: '/natural/structure' },
-            { label: '한약', path: '/therapy/hanyak' },
-            { label: '참고자료', path: '/wednesday/ceo' },
-            { label: '추나 교육 문의', path: '/rd/education' },
-            { label: 'Contact', path: '/contact/info' },   
+            { label: '자연스러운\n구조', path: '/#NaturalStructure' },
+            { label: '한약', path: '/#HerbMedicine' },
+            { label: '참고자료', path: '/#Reference' },
+            { label: '추나 교육 문의', path: '/#Education' },
+            { label: 'Contact', path: '/#Info' },   
         ],
         [
             null,
             null,
-            { label: '자연스러운\n조절 능력', path: '/natural/regulation' },
+            { label: '자연스러운\n조절 능력', path: '/#NaturalRegulation' },
             null,
             null,
             null,
@@ -59,7 +59,7 @@ export default function Navbar({ isHomeSectionMainVisible }) {
         [
             null,
             null,
-            { label: '자연스러운\n영혼과 마음', path: '/natural/mind_soul' },
+            { label: '자연스러운\n영혼과 마음', path: '/#NaturalMindSoul' },
             null,
             null,
             null,

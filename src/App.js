@@ -16,12 +16,12 @@ const router = createBrowserRouter([
     
     children :[
       {index: true, element:<Home />},
-      {path: '/profile', element: <Profile />},
-      {path: '/natural', element: <Natural />},
-      {path: '/therapy', element: <Therapy />},
-      {path: '/wednesday', element: <Wednesday />},
-      {path: '/rd', element: <Research />},
-      {path: '/contact', element: <Contact />}
+      {path: '/Profile', element: <Profile />},
+      {path: '/Natural', element: <Natural />},
+      {path: '/Therapy', element: <Therapy />},
+      {path: '/Wednesday', element: <Wednesday />},
+      {path: '/Research', element: <Research />},
+      {path: '/Contact', element: <Contact />}
     ],
   }
 ]);
